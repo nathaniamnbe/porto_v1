@@ -1,11 +1,7 @@
-"use client"
-
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import "./Navbar.css"
 
 function Navbar() {
-  const [activeDropdown, setActiveDropdown] = useState(null)
-  const dropdownRef = useRef(null)
   const [isMobile, setIsMobile] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -20,22 +16,10 @@ function Navbar() {
     handleResize()
     window.addEventListener("resize", handleResize)
 
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setActiveDropdown(null)
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside)
     return () => {
       window.removeEventListener("resize", handleResize)
-      document.removeEventListener("mousedown", handleClickOutside)
     }
   }, [])
-
-  const toggleDropdown = (dropdown) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
-  }
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
@@ -55,41 +39,16 @@ function Navbar() {
 
       <ul className={`nav-links ${isMobile ? (mobileMenuOpen ? "mobile-active" : "mobile") : ""}`}>
         <li>
-          <a href="#about" className={activeDropdown === "about" ? "active" : ""}>
-            About
-          </a>
+          <a href="#about">About</a>
         </li>
         <li>
-          <a
-            href="#project"
-            className={activeDropdown === "project" ? "active" : ""}
-            onClick={(e) => {
-              if (isMobile) {
-                e.preventDefault()
-                toggleDropdown("project")
-              }
-            }}
-          >
-            Project
-          </a>
-          {activeDropdown === "project" && (
-            <div className="dropdown-menu" ref={dropdownRef}>
-              <div className="dropdown-arrow"></div>
-              <a href="#web-projects">Web Projects</a>
-              <a href="#mobile-projects">Mobile Projects</a>
-              <a href="#ui-projects">UI/UX Projects</a>
-            </div>
-          )}
+          <a href="#project">Project</a>
         </li>
         <li>
-          <a href="#experience" className={activeDropdown === "experience" ? "active" : ""}>
-            Experience
-          </a>
+          <a href="#experience">Experience</a>
         </li>
         <li>
-          <a href="#contact" className={activeDropdown === "contact" ? "active" : ""}>
-            Contact
-          </a>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
     </nav>
