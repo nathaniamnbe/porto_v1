@@ -498,3 +498,34 @@ html {
     font-size: 14px;
   }
 }
+
+.typing-container {
+  display: inline-block;
+  overflow: hidden;
+  white-space: pre-line;
+}
+
+.typing-line {
+  display: block;
+  overflow: hidden;
+  border-right: 2px solid rgba(0, 0, 0, 0);
+  white-space: nowrap;
+  width: 0;
+  animation: typing 1.5s steps(40, end) forwards;
+}
+
+.typing-line:nth-child(2) {
+  animation-delay: 0s;
+}
+.typing-line:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

@@ -42,7 +42,13 @@ function App() {
         <div className="intro">
           <div className="intro-text">
             <p className="intro1">Hey, I'm Nathan</p>
-            <h1 className="intro2">An Informatics student passionate about Front-End, Mobile, and UI/UX</h1>
+            <h1 className="intro2">
+            <span className="typing-container">
+              <span>An Informatics student</span>
+              <span className="typing-line">passionate about Front-</span>
+              <span className="typing-line">End,Mobile, and UI/UX</span>
+            </span>
+          </h1>
             <p className="isi1">
               Enthusiastic Informatics student at Multimedia Nusantara University (6th semester) with a passion for
               Front-End, Mobile Development, and UI/UX Design with experience in web and mobile projects. Passionate
@@ -246,4 +252,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
