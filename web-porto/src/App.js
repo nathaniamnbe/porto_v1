@@ -209,7 +209,7 @@ function App() {
             <div className="experience-card">
               <h3 className="experience-title">Team Leader | PT CitraDimensi Arthali</h3>
               <p className="experience-desc">
-                <strong>Jun 2023 – Apr 2023</strong>
+                <strong>Jun 2023 – Jul 2023</strong>
                 <br />• Led the booth team at Jakarta Fair 2023, ensuring smooth operations and optimal customer
                 service.
                 <br />• Coordinated team activities and provided guidance to achieve targets.
