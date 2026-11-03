@@ -44,9 +44,11 @@ function App() {
             <p className="intro1">Hey, I'm Nathan</p>
             <h1 className="intro2">
               <span className="typing-container">
-                <span>An Informatics student</span>
-                <span className="typing-line">passionate about Front-</span>
-                <span className="typing-line">End,Mobile, and UI/UX</span>
+                <span>Fresh Informatics graduate</span>
+                <span className="typing-line">
+                  with practical experience as
+                </span>
+                <span className="typing-line">a Full-Stack Developer</span>
               </span>
             </h1>
             <p className="isi1">
@@ -63,7 +65,7 @@ function App() {
             </p>
             <div className="button-container">
               <a
-                href="./assets/NathanaelBernike_CV_2025.pdf"
+                href="./assets/NathanaelBernike_CV_2026.pdf"
                 download
                 className="button"
               >
@@ -253,14 +255,21 @@ function App() {
           <div className="experience-container">
             <div className="experience-card">
               <h3 className="experience-title">
-                Barista | Atas Meja Board Game Cafe
+                Full-Stack Developer Intern | PT Sumber Alfaria Trijaya Tbk
               </h3>
               <p className="experience-desc">
-                <strong>Jun 2024 – Apr 2025</strong>
-                <br />• Serving a variety of coffee and non-coffee beverages
-                with high quality standards and friendly customer service.
-                <br />• Creating a pleasant customer experience through
-                personalized service and attention to detail.
+                <strong>Jun 2025 – Dec 2025</strong>
+                <br />
+                Developed and optimized the Opname system to digitize manual
+                workflows within the Building Management & Maintenance
+                department.
+                <br />
+                Integrated an e-meterai application and built the SPARTA web
+                application using JavaScript and system automation workflows.
+                <br />
+                Conducted field User Acceptance Testing (UAT) and site
+                inspections across branch offices in Banten province to ensure
+                software reliability and user alignment.
               </p>
             </div>
 
